@@ -1,54 +1,51 @@
-
-
-
-    let petSaloon={
+let petSaloon={
     name:"Pet Saloon",
     phone: "555-555-5555",
     hours:{
         open:"09:00 am",
         close:"09:00 pm"
+    
     },
     
-    pets:[
-        {name:"Stuffy",
-        age:88,
-        gender: "Male",
-        service:"Grooming",
-        breed: "Poodle",
-        },    
-        {name:"Oodles",
-        age:88,
-        gender: "Girl",
-        service:"Nail clip",
-        breed: "Doodle"
-        },
-        {name:"Dudley",
-        age:88,
-        gender: "Male",
-        service:"VIP",
-        breed:"Dachsund"
-        }
-    ],
-    }
-  
-function displayNames(){    
-    let names="";
-    
-    for(let i=0;i<3;i++){
-        names+= `<p> ${petSaloon.pets[i].name}</p>`;
-        console.log(names);
-        
-    }
-    document.getElementById("petNames").innerHTML=names;
+    pets:[ ],
 }
-function countPets(){
-    
 
+function Pet(name,age,gender,breed,service,type){//constructor
+    //properties = parameters//
+    this.name=name
+    this.age=age;
+    this.gender=gender;
+    this.breed=breed;
+    this.service=service;
+    this.type=type;
+
+}
+
+
+function register(){
+    let inputName=document.getElementById("txtName").value;
+    let inputAge=document.getElementById("txtAge").value;
+    let inputGender=document.getElementById("txtGender").value;
+    let inputBreed=document.getElementById("txtBreed").value;
+    let inputService=document.getElementById("txtService").value;
     
-    console.log(petSaloon.pets.length)
-    
+let newPet = new Pet(inputAge, inputGender, inputName, inputBreed, inputService);
+petSaloon.pets.push(newPet);
+    console.log(petSaloon.pets)
+}
+
+function init(){
+    let pet1= new Pet("Scooby", 15, "Male", "Grooming");//decalring an object//
+    let pet2= new Pet("Oodles", 8, "Female", "Vaccines");
+    let pet3= new Pet("Dudley",33, "Male", "Grooming");
+
+    petSaloon.pets.push(pet1,pet2,pet3);
+        console.log(petSaloon.pets);
+
+}
+window.onload=init;//waiting for HTML to load before running javascript
         
-    }
+    
     
     
     

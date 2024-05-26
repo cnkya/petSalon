@@ -1,0 +1,64 @@
+*{
+    margin:0;
+    padding:0;
+
+}
+body{
+    font-family: arial;
+
+}
+h1,h2,h3, nav{
+    padding-bottom:10px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+p{
+    text-align: center;
+}
+
+img{
+    display: inline-flex;
+    max-width: 100%;
+    padding-bottom: 10px;
+    margin-left: 25%;
+    
+    
+}
+/*utilities*/
+.container{
+    width:80%;
+    margin:0rem auto;
+}
+/*header*/
+.site-init{
+    background-color:beige;
+    height: 100rv;
+    }
+.menu-bar{
+        justify-content: space-around;
+        height: 10vh;
+    }
+.header-info{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    /*utilities*/
+
+
+    .btn-container{
+    display: inline-block;    
+    background-color: #dedede;
+    padding:10px;
+    font-size: 12p
+    
+    }
+    .input-control{
+        text-align: center;
+        padding: 4px;
+        width: 100%;
+        background-color: #dedede;
+        border-radius: 3px;
+    
+    }

@@ -4,18 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./Styles/mystyles.css">
+    
 </head>
 <body>
+    <header>
+    <h1> Pet Salon</h1>
 
-    <h1>Pet Saloon</h1>
-
-    <div id="petNames">
-        <div>
-            
-    <div id="countPets">
-                <div>
-        <img src="./img/Petsalooncover.jpg" alt="">
+    <nav class="menu-bar">
+        <a href="index.html">Home</a>
+        <a href="register.html">Register</a>
+    </nav>
+</div>
+<div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus nulla eos enim distinctio consequatur id architecto totam cum similique, corrupti quae, autem ratione harum aperiam nam alias, ex fuga rem?</p>
+</div>
+<div class="container">
+    <img src="./img/Petsalooncover.jpg" alt="">
+</div>
+</header>
+<main>
+    <div>
+        <div class="input-control">
+            <label>Name:*</label>
+            <input type="text" id="txtName">
+        </div>
+        <div class="input-control">
+            <label>Age:</label>
+            <input type="number" id="txtAge">
+        </div>
+        <div class="input-control">
+            <label>Gender:</label>
+            <input type="text" id="txtGender">
+        </div>
+        <div class="input-control">
+            <label>Breed:</label>
+            <input type="text" id="txtBreed">
+        </div>
+        <div class="input-control">
+            <label>Service:*</label>
+            <select id="txtService" >
+                <option value="" selected disabled>-- Select an option --</option>
+                <option value="Grooming" >-- Grooming --</option>
+                <option value="Vaccines">-- Vaccines --</option>
+                --</option>
+            </select>
+        </div>
+        <div class="input-control">
+            <label>Type:*</label>
+            <select id="txtType" >
+                <option value="" selected disabled>-- Select an option --</option>
+                <option value="Cat" >-- Cat --</option>
+                <option value="Dog">-- Dog --</option>
+                --</option>
+            </select>
+        </div>
+        
+        <div class="input-control">
+            <button class="btn btn-primary" onclick="register();">Register</button>
+        </div>
     </div>
+</main>
+    
 
     <script src="./scripts/register.js"></script>
 </body>
