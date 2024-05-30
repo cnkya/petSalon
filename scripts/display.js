@@ -14,7 +14,7 @@ let row =`
         <td>${pet.breed}</td>
         <td>${pet.service}</td>
         <td>${pet.type}</td>
-        <td>${pet.payment}</td> 
+        <td>${pet.pay}</td> 
         <td><button class="btn btn-danger" onclick="deletePet(${i})">Delete</button></td>
         
     </tr>
