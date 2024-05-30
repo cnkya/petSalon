@@ -12,7 +12,7 @@ let petSaloon={
 }
 
 
-function Pet(name,age,gender,breed,service,type){//constructor
+function Pet(name,age,gender,breed,service,type,pay){//constructor
     //properties = parameters//
     this.name=name;
     this.age=age;
@@ -20,6 +20,7 @@ function Pet(name,age,gender,breed,service,type){//constructor
     this.breed=breed;
     this.service=service;
     this.type=type;
+    this.pay=pay;
 }
 
 function isValid(aPet){
@@ -33,6 +34,10 @@ function isValid(aPet){
     if(aPet.service==""){// is pet service empty?
         validation=false;
         document.getElementById("txtService").classList.add("alert-error")
+    }
+    if(aPet.pay==""){// is pet service empty?
+        validation=false;
+        document.getElementById("txtPay").classList.add("alert-error")
     }
     
     //validate the service
@@ -48,9 +53,10 @@ function register(){
     let inputBreed=document.getElementById("txtBreed").value;
     let inputService=document.getElementById("txtService").value;
     let inputType=document.getElementById("txtType").value;
+    let inputPay=document.getElementById("txtPay").value;
     
     //creating the object
-let newPet = new Pet(inputName,inputAge, inputGender,  inputBreed, inputService, inputType);
+let newPet = new Pet(inputName,inputAge, inputGender,  inputBreed, inputService, inputType, inputPay);
 
 if(isValid(newPet)){//is the information valid
     petSaloon.pets.push(newPet);//adding the pet to the array
@@ -73,9 +79,9 @@ function deletePet(index){
 }
 
 function init(){
-    let pet1= new Pet("Scooby", 15, "Male", "Poodle", "Grooming", "Dog",);//declaring an object//
-    let pet2= new Pet("Oodles", 8, "Female", "Poodle","Vaccines", "Dog");//declaring an object//
-    let pet3= new Pet("Dudley",33, "Male", "Feline","Grooming", "Cat");//declaring an object//
+    let pet1= new Pet("Scooby", 15, "Male", "Poodle", "Grooming", "Dog","Cash");//declaring an object//
+    let pet2= new Pet("Oodles", 8, "Female", "Poodle","Vaccines", "Dog","Credit/Debit Card");//declaring an object//
+    let pet3= new Pet("Dudley",33, "Male", "Siamese","Grooming", "Cat","Venmo/Cashapp");//declaring an object//
 
     petSaloon.pets.push(pet1);
     petSaloon.pets.push(pet2);
