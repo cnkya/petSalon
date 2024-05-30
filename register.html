@@ -53,6 +53,16 @@
                     <option value="Dog" >-- Dog --</option>
                     <option value="Other" >-- Other --</option>
                 </select>
+            
+             <div class="mb-3">
+                <label>Payment method:</label>
+                <select id="txtType" class="form-select">
+                    <option value="" selected disabled>-- Select an option --</option>
+                    <option value="Credit/Debit Card" >-- Credit/Debit Card --</option>
+                    <option value="Cash" >-- Cash --</option>
+                    <option value="Venmo/Cashapp" >-- Venmo/Cashapp --</option>
+                </select>
+            
         </div>
         
         <div>
@@ -68,48 +78,21 @@
         <p> ℹ️ Other = <span id="totalOther">1000</span></p>
         
     </div>
-<div id="petDiv"></div>
-<div>
-        <table class="table">
+        <table class="table table-striped">
             <thead>
+
             <tr>
-                <th>Name</th>
-                <th>Age</th>
-                <th>Gender</th>
-                <th>Breed</th>
-                <th>Service</th>
-                <th>Type</th>
+                <th>Name:</th>
+                <th>Age:</th>
+                <th>Gender:</th>
+                <th>Breed:</th>
+                <th>Service:</th>
+                <th>Type:</th>
+                <th>Action</th>
             </tr>
             
             </thead>
-            <tbody>
-            <tr>
-                
-                <td>Scooby</td>
-                <td>15 yrs</td>
-                <td>Male</td>
-                <td>Poodle</td>
-                <td>Grooming</td>
-                <td>Dog</td>
-            </tr>
-            <tr>
-                
-                <td>Oodles</td>
-                <td>8 yrs</td>
-                <td>Female</td>
-                <td>Poodle</td>
-                <td>Vaccines</td>
-                <td>Dog</td>
-            </tr>
-            <tr>                
-                <td>Dudley</td>
-                <td>33 yrs</td>
-                <td>Male</td>
-                <td>Snickerdoodle</td>
-                <td>Grooming</td>
-                <td>Cat</td>
-            </tr>
-            </tbody>
+            <tbody id="petTable"></tbody>
         </table>
     </div>
     

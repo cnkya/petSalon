@@ -4,12 +4,13 @@ let petSaloon={
     hours:{
         open:"09:00 am",
         close:"09:00 pm"
-    
     },
     
     pets:[ ],
-
+    
+    
 }
+
 
 function Pet(name,age,gender,breed,service,type){//constructor
     //properties = parameters//
@@ -19,11 +20,10 @@ function Pet(name,age,gender,breed,service,type){//constructor
     this.breed=breed;
     this.service=service;
     this.type=type;
-
 }
 
 function isValid(aPet){
-    let validation =true;
+    let validation=true;
 
     if(aPet.name==""){// is pet name empty?
         validation=false;
@@ -56,30 +56,38 @@ if(isValid(newPet)){//is the information valid
     petSaloon.pets.push(newPet);//adding the pet to the array
     //console.log(petSaloon.pets)//displaying on the console
     
-    //displayTotalPets();
-    //displayServiceCount();
+    displayRows();//calling the function in order to display it on the HTML, only displays when you click the button
     displayTypeCatCount();
     displayTypeDogCount();
     displayTypeOtherCount();
-    displayRows();//calling the function in order to display it on the HTML, only displays when you click the button
+    
 }
 
+}
+function deletePet(index){
+    petSaloon.pets.splice(index,1);//removes the pet from the array
+    displayRows();//displays once you login
+    displayTypeCatCount();
+    displayTypeDogCount();
+    displayTypeOtherCount();
 }
 
 function init(){
-    let pet1= new Pet("Scooby", 15, "Male", "Poodle", "Grooming", "Dog",);//decalring an object//
-    let pet2= new Pet("Oodles", 8, "Female", "Poodle","Vaccines", "Dog");//decalring an object//
-    let pet3= new Pet("Dudley",33, "Male", "Feline","Grooming", "Cat");//decalring an object//
+    let pet1= new Pet("Scooby", 15, "Male", "Poodle", "Grooming", "Dog",);//declaring an object//
+    let pet2= new Pet("Oodles", 8, "Female", "Poodle","Vaccines", "Dog");//declaring an object//
+    let pet3= new Pet("Dudley",33, "Male", "Feline","Grooming", "Cat");//declaring an object//
 
-    petSaloon.pets.push(pet1, pet2, pet3);
+    petSaloon.pets.push(pet1);
+    petSaloon.pets.push(pet2);
+    petSaloon.pets.push(pet3);
     //console.log(petSaloon.pets); //displaying currents pets//
     
-    //displayTotalPets();
-    //displayServiceCount();
+    displayRows();//displays once you login
     displayTypeCatCount();
     displayTypeDogCount();
     displayTypeOtherCount();
-    displayRows();//displays once you login
+
+
 }
 window.onload=init;//waiting for HTML to load before running javascript
         
