@@ -25,7 +25,7 @@ function register(){
     let newService = new Service(inputDescription, inputPrice);
 
     if(isValid(newService)){
-        console.log(newService);
+        saveItem(newService);
         $("input").val("");//clears the input fields
     
     }
