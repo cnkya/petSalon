@@ -6,14 +6,15 @@ body{
     font-family: arial;
 }
 
-
+h1{}
 
 h2{
     text-align: center;
 }
 
 img{
-    max-width: 100%;    
+    max-width: 100%;
+    padding-left: 0%;    
 }
 
 a{
@@ -50,10 +51,14 @@ a{
     }
 
 
+
     /*utilities*/
 .container{
     width:80%;
     margin:1rem auto;
+}
+.btn-container{
+    align-items: center;
 }
 
 
