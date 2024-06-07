@@ -20,6 +20,7 @@ function isValid(service){
     return validation;
 }
 
+
 function register(){
     console.log("Adding a new service");//displays in the console
     let inputDescription = $("#txtDescription").val();
@@ -35,22 +36,22 @@ function register(){
     
 }
 function displayServices(){
-
-    const petService=document.getElementById("petService");//gets the table
-        petService.innerHTML ="";
-for(let i=0;i<petSaloon.service.length;i++){//how many services are in the array
-    let service=petSaloon.service[i];//get the current service
-    
-let row =`
-    <tr>
-        <td>${pet.description}</td>//displays the description
-        <td>${pet.price}</td>//displays the price
-        <td><button class="btn btn-danger" onclick="deletePet(${i})">Delete</button></td>//
-        
-    </tr>
-    `;
-    
-    petService.innerHTML +=row;//insert the template into the HTML
+    let services=readItems("services");//read the services
+    for(let i=0;i<services.length;i++){
+        let service=services[i];
+        let row =`
+        <tr>
+            <td>${service.description}</td>//displays the description
+            <td>${service.price}</td>//displays the price
+            <td><button class="btn btn-danger" onclick="deleteService(${i})">Delete</button></td>//
+            
+        </tr>
+        `;
+        $("#serviceTable").append(row);
+        //insert the template into the HTML
     }
     
-}
+    
+    }
+    
+

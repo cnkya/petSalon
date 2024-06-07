@@ -79,16 +79,17 @@ function deletePet(index){
 }
 
 function getServices(){ 
-    let serviceList = readItems();
+    let serviceList = readItems();//read the LS to get the services
     let option;//read the LS to get the services
 
     //travel the array of services
 for(let i=0;i<serviceList.length;i++){
     option=`<option value="${serviceList[i].description}">${serviceList[i].description} </option>`; //create the option on the HTML
 
-    $("#txtService").append(option);
+    $("#txtService").append(option);//append the option to the HTML
 }
 }
+
 function init(){
     let pet1= new Pet("Scooby", 15, "Male", "Poodle", "Grooming", "Dog","Cash");//declaring an object//
     let pet2= new Pet("Oodles", 8, "Female", "Poodle","Vaccines", "Dog","Credit/Debit Card");//declaring an object//
