@@ -78,6 +78,17 @@ function deletePet(index){
     displayTypeOtherCount();
 }
 
+function getServices(){ 
+    let serviceList = readItems();
+    let option;//read the LS to get the services
+
+    //travel the array of services
+for(let i=0;i<serviceList.length;i++){
+    option=`<option value="${serviceList[i].description}">${serviceList[i].description} </option>`; //create the option on the HTML
+
+    $("#txtService").append(option);
+}
+}
 function init(){
     let pet1= new Pet("Scooby", 15, "Male", "Poodle", "Grooming", "Dog","Cash");//declaring an object//
     let pet2= new Pet("Oodles", 8, "Female", "Poodle","Vaccines", "Dog","Credit/Debit Card");//declaring an object//
@@ -92,12 +103,12 @@ function init(){
     displayTypeCatCount();
     displayTypeDogCount();
     displayTypeOtherCount();
+    getServices();
 
 
 }
 window.onload=init;//waiting for HTML to load before running javascript
         
-    
     
     
     

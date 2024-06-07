@@ -4,7 +4,7 @@ let petSaloon={
 }
 //create the constructor
 function Service(description, price){
-    this.descritpion=description;
+    this.description=description;
     this.price=price;
 }
 
