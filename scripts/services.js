@@ -36,9 +36,9 @@ function register(){
     
 }
 function displayServices(){
-    let services=readItems("services");//read the services
-    for(let i=0;i<services.length;i++){
-        let service=services[i];
+    let services=readItems();//read the services
+        for(let i=0;i<services.length;i++){//
+        let service=services[i];//
         let row =`
         <tr>
             <td>${service.description}</td>//displays the description
